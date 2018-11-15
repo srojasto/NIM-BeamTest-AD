@@ -1,0 +1,199 @@
+\documentclass[review]{elsarticle}
+%\documentclass[final,5p,times]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[1]
+
+\usepackage{amsmath}
+%%\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{multirow}
+\usepackage{subcaption}% To use subfigures
+
+%%To add notes un red to my text
+\usepackage{xcolor}
+\newcommand\mynote[1]{\textcolor{red}{#1}}
+%\newcommand\myworries[1]{\textcolor{red}{#1}}
+%%Example: \myworries{But I'm worried about the text}
+%And then if you want to hide the comments, just add the
+%line \renewcommand\myworries[1]{} below the \newcommand.
+%This will hide all your notes
+\renewcommand\mynote[1]{}
+
+%Notes on margin page
+\usepackage{geometry}
+\usepackage{marginnote}
+% \marginnote{This is a margin note using the geometry package, set at 3cm vertical offset to the line it is typeseted.}[3cm]
+%\reversemarginpar
+%\marginnote{This is a margin note using the geometry package, set at 5cm
+%	vertical offset to the first line it is typeset.}[3cm]
+
+%to do notes in the text
+%%  \usepackage[colorinlistoftodos]{todonotes}
+%%To hidde comment the last comand and uncomment the command bellow
+\usepackage[disable]{todonotes}
+ %%\todo{Here's a comment in the margin!}
+ %%\todo[inline, color=green!40]{This is an inline comment.}
+ 
+ %%place figures inside section
+\usepackage{placeins}
+
+\journal{Journal}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lineno}
+\usepackage{graphicx}
+
+%\usepackage{vervatim}
+%\hyperlinking
+\begin{document}
+
+%\tableofcontents
+\linenumbers
+
+\begin{frontmatter}
+
+\title{Performance of the ALICE Diffractive detector in a beam-test.}
+%%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%% Group authors per affiliation:
+%\author{AD collaboration}
+%\author{Solangel Rojas Torres}
+%\address{Radarweg 29, Amsterdam}
+%\fntext[myfootnote]{Since 1880.}
+
+%% or include affiliations in footnotes:
+%\author[rt.solangel@gmail.com,solangel.rojas.torres@cern.ch]{Universidad Aut\'onoma de Sinaloa}
+%\ead[url]{www.elsevier.com}
+
+\author[uas]{Solangel Rojas Torres}
+\ead{rt.solangel@gmail.com,solangel.rojas.torres@cern.ch}
+\author[uas]{Ildefonso Le\'on Monz\'on}
+\author[uas]{Carlos Duarte Galvan}
+\author[uas]{Lucina Gabriela Espinoza Beltr\'an}
+\author[uas]{Juan Carlos Cabanillas Noris}
+\author[civestav]{Gerardo Herrera Corral}
+\author[csr]{Jean-Pierre Revol}
+\author[thn]{Christoph Mayer}
+\author[ctu]{Michal Broz}
+\author[buap]{Mario Iv\'an Mart\'inez Hernandez}
+\author[buap]{Lu\'is Alberto Perez Moreno}
+\author[buap]{Abraham Villatoro Tello}
+\author[buap]{Arturo Fern\'andez T\'ellez}
+\author[buap]{Mario Rodr\'iguez Cahuantzi}
+\author[Helsinki0,Helsinki1]{Risto Orava}
+\author[Helsinki0]{Mikael Mieskolainen}
+\author[pucp]{Alberto Mart\'in Gago Medina}
+\author[pucp]{Ernesto Calvo Villar}
+\author[pucp]{Eric Endress}
+\author[Helsinki0]{Dmitry Finogeev}
+\author[inr]{Alexander Kurepin}
+\author[inr]{Alexey Kurepin}
+\author[inr]{Nikolay Kurepin}
+\author[inr]{Andrey Reshetin}
+\author[inr]{Arseniy Shabanov}
+\author[inr]{Evgueni Usenko}
+\author[seul]{Taesoo Kim}
+%\author[]{}
+%\ead{email2@domain.ca}
+%\ead{email3@domain.ca}
+
+\address[uas]{\textit{Universidad Aut\'onoma de Sinaloa},CULIACAN, M\'exico}
+\address[buap]{\textit{Benem\'erita Univ. Aut\'onoma de Puebla},PUEBLA, M\'exico}
+\address[civestav]{\textit{Centro de Investigación y de Estudios Avanzados del IPN}, C.D. M\'EXICO, M\'exico}
+\address[csr]{Centro Studi e Ricerche ``Enrico Fermi'', ROMA, Italy}
+\address[thn]{\textit{The Henryk Niewodniczanski Inst. of Nucl. Physics Polish Academy of Sciences}, CRACOW, Poland}
+\address[seul]{\textit{Yonsei University}, SEOUL, South Korea}
+\address[ctu]{\textit{Czech Technical University of Prague}, PRAHA, Czech Republic}
+\address[Helsinki0]{\textit{Helsinki Inst. of Physics}, HELSINKI, Finland} 
+\address[Helsinki1]{\textit{The University of Helsinki}, HELSINKI, Finland} 
+\address[pucp]{\textit{Pontificia Universidad Cat\'olica del Per\'u}, LIMA, Per\'u}
+\address[inr]{\textit{Russian Academy of Sciences, Inst. for Nuclear Research}, MOSCOW, Russia}
+
+\begin{abstract}
+	The ALICE Diffractive detector (AD) is a forward detector that was added to ALICE to extend the acceptance of
+	the experiment in the forward rapidity region in order to improve the sensitivity for diffraction physics, for
+	the measurement of the inelastic proton-proton cross-section, and to provide additional measurements of
+	centrality in Pb-Pb, proton-Pb and Xe-Xe collisions. The AD is used as a trigger as well as a beam quality
+	monitor at Point 2 of the LHC. AD consists of two assemblies, ADA and ADC, each station consist of two layers
+	of scintillators. 
+	Two detector modules identical to those installed in the experiment were tested in the PS T10 secondary beam at CERN, at beam momenta 1, 1.5, 2 and 6 GeV/c. The purpose was to check the uniformity of the efficiency
+	across the detector modules, and measure the relative response to protons, pions and muons, therefore study
+	the time and charge response. In addition, an attempt was made to obtain an absolute charge calibration of the
+	detector.
+\begin{comment}
+Diffractive physics is a field of high energy physics whose have a great chances for new discoveries. The use
+of an instrument designed specifically for such propose can extend the capabilities of ALICE experiment at CERN
+to do research on the field. ALICE Diffractive detector was designed for such propose increasing the pseudorapidity 
+coverage of ALICE therefore the probability to detect a phenomena not seen before. It was tested in T10 beam-line 
+facilities  placed at CERN
+and provide a source of particles. Were performed a set of measurement at 1, 1.5, 2 and 6 GeV/c beam momentum to measure
+the time properties and light yielding of the different elements of the detector assemble. Some corrections techniques
+were applied and the results were compared with the performance of the detector already installed in ALICE experiment. 
+We show that the detector have the capability to detect minimum ionization particles with a good separation of the
+noise level (pedestal) and the time resolution achieved fulfill the requirements for the research.
+content...
+\end{comment}
+\end{abstract}
+
+\begin{keyword}
+ALICE\sep Diffractive physics  %\sep Particle detector \sep Beam test 
+\sep Performance of High Energy Physics Detectors
+%\sep Scintillators
+%\sep Time resolution
+%\MSC[2016] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+
+\input{NIM-tex/introduction_v0.tex}
+%\input{NIM-tex/ADdetector_v0.tex}
+\input{NIM-tex/expSetup_v3.tex}
+\input{NIM-tex/DataSamples_v3.tex}
+\input{NIM-tex/results_v3.tex}
+\input{NIM-tex/conclusion_v0.tex}
+%\newpage \clearpage
+%\input{NIM-tex/appendix_v0.tex}
+
+%\newpage 
+%\clearpage
+\pagebreak
+\bibliography{ref}
+
+
+\end{document}
